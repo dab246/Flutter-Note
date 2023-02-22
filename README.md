@@ -3,7 +3,21 @@ Note the ways to handle common bug
 
 ### 1. `✗ Unable to find bundled Java version.` while upgrade version flutter
 
-#### Way 1:
+#### Evidence
+```
+[!] Android Studio (version 2022.1)
+    • Android Studio at C:\Program Files\Android Studio\Android Studio 2022.1.1.13
+    • Flutter plugin can be installed from:
+       https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+       https://plugins.jetbrains.com/plugin/6351-dart
+    X Unable to find bundled Java version.
+    • Try updating or re-installing Android Studio.
+```
+
+#### Solution
+
+##### Way 1:
 
 - Step 1: Command run in terminal
 
@@ -23,7 +37,7 @@ ln -s "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin" jdk
 
 - Step 3: Run again `flutter doctor -v`
 
-#### Way 2:
+##### Way 2:
 
 - Command run in terminal:
 
@@ -33,3 +47,21 @@ ln -s ../jre jdk
 ln -s "/Library/Internet Plug-Ins/JavaAppletPlugin.plugin" jdk
 flutter doctor -v
 ```
+
+### 2. Flutter Doctor warns about different paths after upgrading from 3.0.1 to 3.7.4
+
+```
+flutter doctor -v
+
+[!] Flutter (Channel stable, 3.7.4, on macOS 13.1 22C65 darwin-arm64, locale en-VN)
+    • Flutter version 3.7.4 on channel stable at /Users/dab.dev/FlutterDev/flutter
+    ! Warning: `dart` on your path resolves to /opt/homebrew/Cellar/dart/2.18.0/libexec/bin/dart, which is not inside your current Flutter SDK checkout at
+      /Users/dab.dev/FlutterDev/flutter. Consider adding /Users/dab.dev/FlutterDev/flutter/bin to the front of your path.
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision b4bce91dd0 (30 hours ago), 2023-02-21 09:50:50 +0800
+    • Engine revision 248290d6d5
+    • Dart version 2.19.2
+    • DevTools version 2.20.1
+    • If those were intentional, you can disregard the above warnings; however it is recommended to use "git" directly to perform update checks and upgrades.
+```
+
