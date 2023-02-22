@@ -50,6 +50,8 @@ flutter doctor -v
 
 ### 2. Flutter Doctor warns about different paths after upgrading from 3.0.1 to 3.7.4
 
+#### Evidence
+
 ```
 flutter doctor -v
 
@@ -65,3 +67,8 @@ flutter doctor -v
     • If those were intentional, you can disregard the above warnings; however it is recommended to use "git" directly to perform update checks and upgrades.
 ```
 
+#### Solution
+
+Type in `nano ~/.zshrc:`
+
+```export PATH="/Users/development/flutter/bin:$PATH"```
