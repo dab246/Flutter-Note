@@ -3,7 +3,7 @@ Note the ways to handle common bug
 
 ### 1. `✗ Unable to find bundled Java version.` while upgrade version flutter
 
-#### Evidence
+#### - Evidence
 ```
 [!] Android Studio (version 2022.1)
     • Android Studio at C:\Program Files\Android Studio\Android Studio 2022.1.1.13
@@ -15,7 +15,7 @@ Note the ways to handle common bug
     • Try updating or re-installing Android Studio.
 ```
 
-#### Solution
+#### - Solution
 
 ##### Way 1:
 
@@ -50,7 +50,7 @@ flutter doctor -v
 
 ### 2. Flutter Doctor warns about different paths after upgrading from 3.0.1 to 3.7.4
 
-#### Evidence
+#### - Evidence
 
 ```
 flutter doctor -v
@@ -67,7 +67,7 @@ flutter doctor -v
     • If those were intentional, you can disregard the above warnings; however it is recommended to use "git" directly to perform update checks and upgrades.
 ```
 
-#### Solution
+#### - Solution
 
 Type in `nano ~/.zshrc:`
 
@@ -75,8 +75,31 @@ Type in `nano ~/.zshrc:`
 
 ### 3. Ignoring ffi-1.13.1 because its extensions are not built. Try: gem pristine ffi --version 1.13.1
 
-#### Solution
+#### - Solution
  
  Run `brew install cocoapods`
 
+### 4. CocoaPods could not find compatible versions for pod "XXX"
 
+#### - Evidence
+
+```
+[!] CocoaPods could not find compatible versions for pod "AppAuth":
+  In snapshot (Podfile.lock):
+    AppAuth (= 1.4.0)
+
+  In Podfile:
+    flutter_appauth (from `.symlinks/plugins/flutter_appauth/ios`) was resolved to 0.0.1, which depends on
+      AppAuth (= 1.6.0)
+
+
+You have either:
+ * out-of-date source repos which you can update with `pod repo update` or with `pod install --repo-update`.
+ * changed the constraints of dependency `AppAuth` inside your development pod `flutter_appauth`.
+   You should run `pod update AppAuth` to apply changes you've made.
+```
+
+#### - Solution
+
+- Delete `Podfile.lock`
+- Run `pod install`
