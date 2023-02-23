@@ -72,3 +72,11 @@ flutter doctor -v
 Type in `nano ~/.zshrc:`
 
 ```export PATH="/Users/development/flutter/bin:$PATH"```
+
+### 3. Ignoring ffi-1.13.1 because its extensions are not built. Try: gem pristine ffi --version 1.13.1
+
+#### Solution
+ 
+ Run `brew install cocoapods`
+
+
