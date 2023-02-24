@@ -103,3 +103,12 @@ You have either:
 
 - Delete `Podfile.lock`
 - Run `pod install`
+
+### 5. Downgrade flutter version
+
+- Run command:
+```
+flutter downgrade <version>
+```
+- This command will use a specific version number. You can have the list of the available version numbers using flutter downgrade or [here](https://github.com/flutter/flutter/tags)
+- Refer: https://stackoverflow.com/a/56127174
