@@ -104,7 +104,16 @@ You have either:
 - Delete `Podfile.lock`
 - Run `pod install`
 
-### 5. Downgrade flutter version
+Or
+
+- Run `pod update AppAuth`
+
+### 5. LoadError - `dlopen(/Library/Ruby/Gems/2.6.0/gems/ffi-1.15.0/lib/ffi_c.bundle, 0x0009): missing compatible arch in /Library/Ruby/Gems/2.6.0/gems/ffi-1.15.0/lib/ffi_c.bundle - /Library/Ruby/Gems/2.6.0/gems/ffi-1.15.0/lib/ffi_c.bundle`
+
+- Run `sudo arch -x86_64 gem install ffi`
+- Then run `arch -x86_64 pod update Firebase/Auth`
+
+### 6. Downgrade flutter version
 
 - Run command:
 ```
@@ -112,3 +121,7 @@ flutter downgrade <version>
 ```
 - This command will use a specific version number. You can have the list of the available version numbers using flutter downgrade or [here](https://github.com/flutter/flutter/tags)
 - Refer: https://stackoverflow.com/a/56127174
+
+### 7. Fix iOS compile issues
+
+- https://www.wafrat.com/fixing-ios-compile-issues-in-flutter/
