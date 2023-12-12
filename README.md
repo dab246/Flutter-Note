@@ -79,6 +79,8 @@ Type in `nano ~/.zshrc:`
  
  Run `brew install cocoapods`
 
+ - For mac M1: `$ sudo gem install cocoapods`
+
 ### 4. CocoaPods could not find compatible versions for pod "XXX"
 
 #### - Evidence
