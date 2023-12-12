@@ -127,3 +127,13 @@ flutter downgrade <version>
 ### 7. Fix iOS compile issues
 
 - https://www.wafrat.com/fixing-ios-compile-issues-in-flutter/
+
+### 8. Xcode 15 only produces a cycle inside build error
+
+Follow the below steps.
+
+```
+- Goto Build Phase tab.
+- Drag /Embed App Extension' and place it below 'Run script'.
+- Run it gain.
+```
