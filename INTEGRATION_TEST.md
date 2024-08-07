@@ -102,3 +102,7 @@ After Class
 ## 2. How to Install Maven on Mac OS
 
 - Reference: [install-maven-mac-os](https://www.digitalocean.com/community/tutorials/install-maven-mac-os)
+
+## 3. Test Automation with Playwright Java
+
+- Reference: [playwright-java-tutorial](https://www.browserstack.com/guide/playwright-java-tutorial)
