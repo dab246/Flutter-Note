@@ -1,4 +1,4 @@
-1. JUnit
+## 1. JUnit
 
 - Difference between each annotation in `JUnit 4 & 5`
 
@@ -98,3 +98,7 @@ Before Function
 After Function
 After Class
 ```
+
+## 2. How to Install Maven on Mac OS
+
+- Reference: [install-maven-mac-os](https://www.digitalocean.com/community/tutorials/install-maven-mac-os)
